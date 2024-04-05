@@ -8,6 +8,6 @@ jobs:
     uses: UKHomeOffice/sas-github-workflows/.github/workflows/test-npm.yml@v1
     secrets: inherit
     with:
-      lintCommand: 'run test:lint'
+      lintCommand: 'test:lint'
       testCommand: 'run test:unit'
 
