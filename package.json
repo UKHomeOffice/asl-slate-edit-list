@@ -39,6 +39,7 @@
     "stringify": "^5.1.0"
   },
   "scripts": {
+    "audit": "npm audit --audit-level=high --omit=dev",
     "build": "npm run build:dist && npm run build:flow",
     "build:dist": "rm -r ./dist; babel ./lib --out-dir ./dist",
     "build:flow": "flow-copy-source -v ./lib/ ./dist/",
