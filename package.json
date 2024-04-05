@@ -1,7 +1,7 @@
 {
   "name": "@ukhomeoffice/asl-slate-edit-list",
   "description": "A Slate plugin to handle keyboard events in lists.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -46,7 +46,7 @@
     "build": "npm run build:dist && npm run build:flow",
     "build:dist": "rm -r ./dist; babel ./lib --out-dir ./dist",
     "build:flow": "flow-copy-source -v ./lib/ ./dist/",
-    "prepublish": "npm run build:dist && npm run build:flow",
+    "prepublishOnly": "npm run build:dist && npm run build:flow",
     "test:lint": "echo 'To be reinstated if/when brought in-house'; exit 0",
     "start": "npm run build-example && npm run serve-example",
     "test:unit": "mocha ./tests/all.js --require @babel/register --reporter=list"
