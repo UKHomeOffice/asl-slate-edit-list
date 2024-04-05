@@ -1,9 +1,12 @@
 {
   "name": "@ukhomeoffice/asl-slate-edit-list",
   "description": "A Slate plugin to handle keyboard events in lists.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "Apache-2.0",
-  "repository": "git://github.com/UKHomeOffice/asl-slate-edit-list.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/UKHomeOffice/asl-slate-edit-list.git"
+  },
   "main": "./dist/index.js",
   "peerDependencies": {
     "immutable": "^3.8.2 || ^4.0.0-rc.12",
@@ -47,12 +50,12 @@
     "postpublish": "npm run deploy-example",
     "test:lint": "echo 'To be reinstated if/when brought in-house'; exit 0",
     "start": "npm run build-example && npm run serve-example",
-    "test:unit": "./node_modules/.bin/mocha ./tests/all.js --require @babel/register --reporter=list"
+    "test:unit": "mocha ./tests/all.js --require @babel/register --reporter=list"
   },
   "keywords": [
     "slate"
   ],
   "publishConfig": {
-    "access": "public"
+    "@ukhomeoffice:registry": "https://npm.pkg.github.com"
   }
 }
